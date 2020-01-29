@@ -1,0 +1,28 @@
+// base.html.twig
+body {
+    background-color: lightblue;
+    header {
+        .parallax {
+            background-image: url("https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/42939552_246245726065246_2547866774280339456_n.jpg?_nc_cat=111&_nc_ohc=fBs6PeSmSikAX_Jzi0k&_nc_ht=scontent-frx5-1.xx&oh=a52d32ae9351beaefa0d8e063fedc03a&oe=5EC62668");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0;
+            height: 300px;
+        }
+
+        .navigation {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            top: 0;
+        }
+
+        #navigation nav img {
+            height: 56px;
+        }
+    }
+
+
+}
