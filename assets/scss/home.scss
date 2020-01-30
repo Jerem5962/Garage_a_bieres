@@ -1,25 +1,30 @@
+@import "vars";
 // index.html.twig
-body {
-    main {
-        .container {
-            margin-top: 30px;
+main {
+    .container {
 
-            img {
-                height: 200px;
-                width: 200px;
-                border-radius: 20px;
-                margin: 5px;
-            }
+        margin-top: 30px;
+
+        .row {
+            border-radius: 25px;
         }
-        table {
-            opacity: 75%;
+
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            margin: 5px;
+        }
+    }
+    table {
+        opacity: 75%;
+        text-align: center;
+        background-color: $primary-color!important;
+        border: 2px solid $secondary-color;
+
+
+        thead {
             text-align: center;
-            background-color: #929C67;
-
-            thead {
-                text-align: center;
-            }
         }
-
     }
 }
