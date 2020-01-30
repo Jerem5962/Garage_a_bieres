@@ -4,11 +4,46 @@
 {% endblock %}
 {% block body %}
     <main>
-        <div>
-            <p>helllo</p>
-        </div>
-        <div class="test">
+        <div class="container">
+            {% for produit in produits %}
+                <div class="row">
+                        <table class="jumbotron">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <h1>{{ produit.marque }}</h1>
+                                </th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tboby>
+                                <tr>
+                                    <th>
+                                        <img src="{{ produit.photos }}" alt="">
+                                    </th>
+                                    <th>
+                                       <h3>description:</h3>  <br>
+                                        {{ produit.description }}
+                                    </th>
+                                </tr>
+                            </tboby>
+                            <tfoot>
+                            <tr>
+                                <th>
+                                </th>
+                                <th>
+                                    prix: 20 €
+                                </th>
 
+                            </tr>
+                            </tfoot>
+
+                        </table>
+                </div>
+
+
+            {% endfor %}
         </div>
     </main>
 

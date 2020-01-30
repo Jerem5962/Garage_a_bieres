@@ -1,14 +1,25 @@
 // index.html.twig
 body {
     main {
-        div {
-            height: 700px;
-            background-color: black;
+        .container {
+            margin-top: 30px;
+
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 20px;
+                margin: 5px;
+            }
+        }
+        table {
+            opacity: 75%;
+            text-align: center;
+            background-color: #929C67;
+
+            thead {
+                text-align: center;
+            }
         }
 
-        .test {
-            height: 700px;
-            background-color: #718C00;
-        }
     }
 }
