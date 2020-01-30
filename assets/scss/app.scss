@@ -14,7 +14,29 @@ body {
             background-repeat: no-repeat;
             background-size: cover;
             top: 0;
-            height: 300px;
+            height: 310px;
+            text-align: center;
+
+            .connexion {
+                background-color: $primary-color;
+                border-radius: 10px;
+                opacity: 85%;
+                position: fixed;
+            }
+
+            .innav {
+                display: none;
+            }
+
+            p {
+                text-align: center;
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
 
         .navigation {

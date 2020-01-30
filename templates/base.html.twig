@@ -15,6 +15,17 @@
     <body>
     <header>
         <div class="parallax">
+            <div class="row">
+                    <div class="offset-10 col-2 connexion p-0" id="connexion">
+                        {% if app.user %}
+                            <p>Bienvenue {{ app.user.username }}</p>
+                        {% else %}
+                            <a href="{{ path('app_login') }}">Connecte toi</a><br>
+                            <p>ou</p>
+                            <a href="{{ path('app_register') }}">Créer ton compte</a>
+                        {% endif %}
+                    </div>
+            </div>
         </div>
         <div id="navigation" class="">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -34,6 +45,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Vin</a>
                         </li>
+                        {% if app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </nav>
