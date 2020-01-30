@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{%  block stylesheets %}
+    {{ encore_entry_link_tags('produits') }}
+{% endblock %}
+
+{% block body %}
+    <div class="contain">
+        <h1>{{ categorie.nom }}</h1>
+        {% for produit in produits %}
+            <div class="produit">
+                <h2>{{ produit.marque }}</h2>
+                <div class="contenu">
+                    <img src="{{ produit.photos }}" alt="">
+                    <h4>decription du produit:</h4> <p>{{ produit.description }}</p>
+                </div>
+                <div class="degres">
+                    degrés: {{ produit.degres }}°
+                </div>
+                <div class="prix">
+                   prix: 10e
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
