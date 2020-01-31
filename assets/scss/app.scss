@@ -1,0 +1,62 @@
+// base.html.twig
+@import "vars";
+
+body {
+    background-image: url("https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/46507855_262202574469561_3509438857261088768_n.jpg?_nc_cat=111&_nc_ohc=0vjz_bEqXxcAX9eut13&_nc_ht=scontent-frx5-1.xx&oh=36d0de8f32ca8d59eb46d625e9ee19bb&oe=5ECFC9CF");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 300px;
+
+    header {
+        .parallax {
+            background-image: url("https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/42939552_246245726065246_2547866774280339456_n.jpg?_nc_cat=111&_nc_ohc=fBs6PeSmSikAX_Jzi0k&_nc_ht=scontent-frx5-1.xx&oh=a52d32ae9351beaefa0d8e063fedc03a&oe=5EC62668");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0;
+            height: 310px;
+            text-align: center;
+
+            .connexion {
+                background-color: $primary-color;
+                border-radius: 10px;
+                opacity: 85%;
+                position: fixed;
+            }
+
+            .innav {
+                display: none;
+            }
+
+            p {
+                text-align: center;
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .navigation {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            top: 0;
+            background-color: #9C8C67;
+            opacity: 85%;
+        }
+
+        #navigation {
+            background-color: #9C8C67;
+            opacity: 85%;
+                nav img {
+                    height: 56px;
+                }
+            }
+    }
+
+
+}
