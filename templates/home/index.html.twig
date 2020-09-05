@@ -4,11 +4,15 @@
 {% endblock %}
 {% block body %}
     <main>
-        <div class="container">
-            {% for produit in produits %}
-                <div class="row">
-                        <table class="jumbotron">
-                            <thead>
+        <div class="container_body">
+            <div class="content">
+                <div class="title_card">
+                    <h2 class="text-center">Nouveauté</h2>
+                </div>
+                {% for produit in produits %}
+                <div class="produit_card">
+                    <table class="">
+                        <thead>
                             <tr>
                                 <th></th>
                                 <th>
@@ -16,34 +20,31 @@
                                 </th>
                                 <th></th>
                             </tr>
-                            </thead>
-                            <tboby>
-                                <tr>
-                                    <th>
-                                        <img src="{{ produit.photos }}" alt="">
-                                    </th>
-                                    <th>
-                                       <h3>description:</h3>  <br>
-                                        {{ produit.description }}
-                                    </th>
-                                </tr>
-                            </tboby>
-                            <tfoot>
+                        </thead>
+                        <tboby>
                             <tr>
                                 <th>
+                                    <img src="{{ produit.photos }}" alt="">
                                 </th>
                                 <th>
-                                    prix: {{ produit.price }} €
+                                    <h3>description:</h3>  <br>
+                                    {{ produit.description }}
                                 </th>
-
                             </tr>
-                            </tfoot>
-
-                        </table>
+                        </tboby>
+                        <tfoot>
+                        <tr>
+                            <th>
+                            </th>
+                            <th>
+                                prix: {{ produit.price }} €
+                            </th>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
-
-
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </main>
 

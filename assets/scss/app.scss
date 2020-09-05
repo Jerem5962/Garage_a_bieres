@@ -2,13 +2,13 @@
 @import "vars";
 
 body {
-    background-image: asset('../public/images/presentation.jpg');
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
 
     header {
         .parallax {
-            background-image: url("https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/42939552_246245726065246_2547866774280339456_n.jpg?_nc_cat=111&_nc_ohc=fBs6PeSmSikAX_Jzi0k&_nc_ht=scontent-frx5-1.xx&oh=a52d32ae9351beaefa0d8e063fedc03a&oe=5EC62668");
+            background-image: url("/images/nouveaute.jpg");
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body {
             text-align: center;
 
             .connexion {
-                background-color: $primary-color;
+                background-color: $secondary-color;
                 border-radius: 10px;
                 opacity: 85%;
                 position: fixed;
