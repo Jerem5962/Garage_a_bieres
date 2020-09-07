@@ -28,6 +28,7 @@ Encore
     .addEntry('home', './assets/scss/home.scss')
     .addEntry('navigation', './assets/js/navbar.js')
     .addEntry('produits', './assets/scss/produits.scss')
+    .addEntry('cardProduct', './assets/scss/cardProduct.scss')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
