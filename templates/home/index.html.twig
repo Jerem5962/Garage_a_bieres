@@ -7,43 +7,94 @@
         <div class="container_body">
             <div class="content">
                 <div class="title_card">
-                    <h2 class="text-center">Nouveauté</h2>
+                    <h2 class="text-center">Nouveautés</h2>
                 </div>
-                {% for produit in produits %}
-                <div class="produit_card">
-                    <table class="">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>
-                                    <h1>{{ produit.marque }}</h1>
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tboby>
-                            <tr>
-                                <th>
-                                    <img src="{{ produit.photos }}" alt="">
-                                </th>
-                                <th>
-                                    <h3>description:</h3>  <br>
-                                    {{ produit.description }}
-                                </th>
-                            </tr>
-                        </tboby>
-                        <tfoot>
-                        <tr>
-                            <th>
-                            </th>
-                            <th>
-                                prix: {{ produit.price }} €
-                            </th>
-                        </tr>
-                        </tfoot>
-                    </table>
+                <div class="content_product">
+                    {% for produit in produits %}
+                        <a href="{{ path('produit_show', { id:produit.id }) }}">
+                            <div class="produit_card">
+                                <table class="">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <h1>{{ produit.marque }}</h1>
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tboby>
+                                        <tr>
+                                            <th>
+                                                <img src="{{ produit.photos }}" alt="">
+                                            </th>
+                                            <th>
+                                                <h3>description:</h3>  <br>
+                                                {{ produit.description }}
+                                            </th>
+                                        </tr>
+                                    </tboby>
+                                    <tfoot>
+                                    <tr>
+                                        <th>
+                                        </th>
+                                        <th>
+                                            prix: {{ produit.price }} €
+                                        </th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </a>
+
+                    {% endfor %}
                 </div>
-                {% endfor %}
+
+            </div>
+
+            <div class="content">
+                <div class="title_card">
+                    <h2 class="text-center">Promotions</h2>
+                </div>
+                <div class="content_product">
+                    {% for promo in promos %}
+                        <a href="">
+                            <div class="produit_card">
+                                <table class="">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <h1>{{ promo.marque }}</h1>
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tboby>
+                                        <tr>
+                                            <th>
+                                                <img src="{{ promo.photos }}" alt="">
+                                            </th>
+                                            <th>
+                                                <h3>description:</h3>  <br>
+                                                {{ promo.description }}
+                                            </th>
+                                        </tr>
+                                    </tboby>
+                                    <tfoot>
+                                    <tr>
+                                        <th>
+                                        </th>
+                                        <th>
+                                            prix: {{ promo.price }} €
+                                        </th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </main>

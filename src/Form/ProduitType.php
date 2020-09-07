@@ -18,6 +18,7 @@ class ProduitType extends AbstractType
             ->add('degres')
             ->add('photos')
             ->add('categorie')
+            ->add('price')
         ;
     }
 

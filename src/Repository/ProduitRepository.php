@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -17,6 +18,15 @@ class ProduitRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Produit::class);
+    }
+
+    public function selectNew() {
+        $endDate = new DateTime('-30 day');
+        $qb = $this->createQueryBuilder('n')
+                        ->where('n.created_at > :val')
+                        ->setParameter('val', $endDate);
+
+        return $qb->getQuery()->execute();
     }
 
     // /**
