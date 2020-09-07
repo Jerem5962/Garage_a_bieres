@@ -29,31 +29,43 @@
         </div>
         <div id="navigation" class="">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/24232865_132147710808382_8540368439467164924_n.jpg?_nc_cat=102&_nc_ohc=NTQtlmFEo_MAX9hRSST&_nc_ht=scontent-frt3-1.xx&oh=ce15f078a757e10cc3afb52cc29ac07f&oe=5E98FB27" alt="logo du garage à bières">
+                <img src="{{ asset('images/logo.jpg') }}" alt="logo du garage à bières">
                 <a class="navbar-brand" href="{{ path('home') }}">Garage à bières</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('beer') }}">Bières <span class="sr-only">(current)</span></a>
-                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('whisky') }}">Whisky</a>
+                            <button class="" data-toggle="collapse" data-target="#categorie" type="button" aria-controls="categorie" aria-expanded="false" aria-label="Toggle navigation">
+                                <span>Categorie</span>
+                            </button>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('vin') }}">Vin</a>
-                        </li>
-                        {% if app.user %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
-                        </li>
-                        {% endif %}
+
+                        <div class="collapse" id="categorie">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/biere">Bières<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/vin">Vin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="whisky">Whisky</a>
+                            </li>
+                        </div>
+
+                        <div class="float-right">
+                            {% if app.user %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                                </li>
+                            {% endif %}
+                        </div>
+
                     </ul>
                 </div>
             </nav>
