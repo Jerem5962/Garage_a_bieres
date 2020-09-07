@@ -8,6 +8,7 @@ use App\Repository\CategorieRepository;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -20,7 +21,7 @@ class ProduitsController extends AbstractController
     /**
      * @param ProduitRepository $repoProduits
      * @param CategorieRepository $repoCategorie
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      * @Route("/bieres", name="beer")
      */
     public function viewBeer(ProduitRepository $repoProduits, CategorieRepository $repoCategorie)
@@ -36,7 +37,7 @@ class ProduitsController extends AbstractController
     /**
      * @param ProduitRepository $repoProduits
      * @param CategorieRepository $repoCategorie
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      * @Route("/whisky", name="whisky")
      */
     public function viewWhisky(ProduitRepository $repoProduits, CategorieRepository $repoCategorie)
@@ -52,7 +53,7 @@ class ProduitsController extends AbstractController
     /**
      * @param ProduitRepository $repoProduits
      * @param CategorieRepository $repoCategorie
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      * @Route("/vin", name="vin")
      */
     public function viewVin(ProduitRepository $repoProduits, CategorieRepository $repoCategorie)
