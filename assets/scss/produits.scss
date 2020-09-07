@@ -1,0 +1,50 @@
+@import "vars";
+
+.contain {
+    width: 80%;
+    margin: 20px auto 10px auto;
+    color: white;
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        border-bottom: 2px solid $secondary-color;
+    }
+
+    .produit {
+        background-color: $primary-color;
+        opacity: 85%;
+        display: flex;
+        justify-content: center;
+        border: 2px solid $secondary-color;
+        border-radius: 15px;
+        margin: 10px auto 10px auto;
+        width: 80%;
+
+        h2 {
+            width: 50%;
+        }
+
+        .prix {
+            left: 0;
+        }
+
+        .contenu {
+            text-align: center;
+        }
+
+        .degres {
+            text-align: center;
+        }
+
+        .prix {
+            text-align: center;
+        }
+    }
+}
