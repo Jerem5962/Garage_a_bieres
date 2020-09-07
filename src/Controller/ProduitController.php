@@ -66,6 +66,9 @@ class ProduitController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="produit_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Produit $produit
+     * @return Response
      */
     public function edit(Request $request, Produit $produit): Response
     {
@@ -86,6 +89,9 @@ class ProduitController extends AbstractController
 
     /**
      * @Route("/{id}", name="produit_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Produit $produit
+     * @return Response
      */
     public function delete(Request $request, Produit $produit): Response
     {

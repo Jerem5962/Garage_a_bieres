@@ -1,0 +1,35 @@
+<a href="{{ path('produit_show', { id:produit.id }) }}" id="productCard">
+    <div class="produit_card">
+        <table class="">
+            <thead>
+            <tr>
+                <th></th>
+                <th>
+                    <h1>{{ produit.marque }}</h1>
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tboby>
+                <tr>
+                    <th>
+                        <img src="{{ produit.photos }}" alt="">
+                    </th>
+                    <th>
+                        <h3>description:</h3>  <br>
+                        {{ produit.description }}
+                    </th>
+                </tr>
+            </tboby>
+            <tfoot>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    prix: {{ produit.price }} €
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</a>
