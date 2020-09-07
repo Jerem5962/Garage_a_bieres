@@ -52,6 +52,16 @@ class Produit
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created_at;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $promo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,6 +147,30 @@ class Produit
     public function setPrice(float $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getPromo(): ?bool
+    {
+        return $this->promo;
+    }
+
+    public function setPromo(bool $promo): self
+    {
+        $this->promo = $promo;
 
         return $this;
     }

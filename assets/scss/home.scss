@@ -9,29 +9,45 @@ body {
 
             .content {
                 width: 70%;
+                height: auto;
                 margin: 10px auto;
             }
 
-            .produit_card {
-                margin: 5px 0;
-            }
-            img {
-                height: 200px;
-                width: 200px;
-                border-radius: 20px;
-                margin: 5px;
-                opacity: 65%;
-            }
+            .content_product {
+                height: 35vh;
+                overflow: scroll;
+                overflow-x: hidden;
 
-            table {
-                opacity: 95%;
-                text-align: center;
-                background-color: #929C67;
+                .produit_card {
+                    display: flex;
+                    margin: 5px auto;
+                    width: 90%;
+                }
 
-                thead {
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                img {
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 20px;
+                    margin: 5px;
+                    opacity: 65%;
+                }
+
+                table {
+                    opacity: 95%;
                     text-align: center;
+                    background-color: #929C67;
+
+                    thead {
+                        text-align: center;
+                    }
                 }
             }
+
         }
     }
 }

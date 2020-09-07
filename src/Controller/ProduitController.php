@@ -17,6 +17,8 @@ class ProduitController extends AbstractController
 {
     /**
      * @Route("/", name="produit_index", methods={"GET"})
+     * @param ProduitRepository $produitRepository
+     * @return Response
      */
     public function index(ProduitRepository $produitRepository): Response
     {
@@ -27,6 +29,8 @@ class ProduitController extends AbstractController
 
     /**
      * @Route("/new", name="produit_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -50,6 +54,8 @@ class ProduitController extends AbstractController
 
     /**
      * @Route("/{id}", name="produit_show", methods={"GET"})
+     * @param Produit $produit
+     * @return Response
      */
     public function show(Produit $produit): Response
     {
